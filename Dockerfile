@@ -20,6 +20,8 @@ RUN chmod +x gradlew
 # -w test -> test를 제외하고 작업
 
 RUN ./gradlew dependencies --no-daemon
+#소스코드 복사
+COPY src /myapp/src
 RUN ./gradlew clean build --no-daemon -x test
 
 # 자바를 실행하기 위한 작업
