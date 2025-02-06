@@ -19,7 +19,7 @@ RUN chmod +x gradlew
 # CICD에서는 gradlew를 이용해서 작업
 # -w test -> test를 제외하고 작업
 
-RUN #./gradlew dependencies --no-daemon
+#RUN #./gradlew dependencies --no-daemon
 #소스코드 복사
 #COPY src /myapp/src
 RUN ./gradlew clean build --no-daemon -x test
